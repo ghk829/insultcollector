@@ -22,7 +22,8 @@ app.use(bodyParser.json());
 // routes
 require('module-alias/register');
 var message = require('@route/message')(app)
-
+var keyboard = require('@route/keyboard')(app)
+app.use('/keyboard',keyboard)
 app.use('/message',message);
 
 var winston = require('winston');
