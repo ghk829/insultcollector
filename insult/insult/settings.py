@@ -23,9 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'svmbqqaman)^##u#8ej(fnhqe90wo1jo65%dw^=v+sw8z-codx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+import dj_database_url
 
-ALLOWED_HOSTS = []
+
+
+DEBUG = False
+
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 
 # Application definition
