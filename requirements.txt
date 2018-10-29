@@ -7,7 +7,6 @@ certifi==2018.4.16
 cffi==1.11.5
 chardet==3.0.4
 colorama==0.4.0
-conda==4.5.4
 configparser==3.5.0
 cryptography==2.2.2
 decorator==4.3.0
@@ -20,16 +19,8 @@ functools32==3.2.3.post2
 futures==3.2.0
 idna==2.6
 ipaddress==1.0.22
-ipykernel==4.10.0
-ipython==5.8.0
-ipython-genutils==0.2.0
-ipywidgets==7.4.2
 Jinja2==2.10
 jsonschema==2.6.0
-jupyter==1.0.0
-jupyter-client==5.2.3
-jupyter-console==5.2.0
-jupyter-core==4.4.0
 MarkupSafe==1.0
 menuinst==1.4.14
 mistune==0.8.4
