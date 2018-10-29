@@ -6,7 +6,7 @@ var messageSchema = new Schema({
     //author: {type:Schema.Types.ObjectId,ref:'user'},
     // 임시로 loginId로
     type : String,
-    content: { type: Date, default: Date.now  },
+    content: String
 });
 
 module.exports = mongoose.model('Message', messageSchema);

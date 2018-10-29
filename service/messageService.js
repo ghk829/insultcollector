@@ -1,32 +1,38 @@
-messageService = function(){
-	return {
-		registerMessage : function(reqData){
-			var result;
-			const Message = require("@model/Message")
-			
-			var message = new Message();
-			//reqData Setter
-			for(var elem in reqData){
-				message[elem] = reqData[elem];
-			}
-			message.save(function(err,art){
-				if(err){
-					var text = "귀하의 차량이 성공적으로 등록되었습니다. 축하합니다!";
-					result = {"message":{"text":text}};
+messageService = function(reqData){
+			return new Promise(function(resolved,rejected){
+				var result;
+				const Message = require("@model/Message")
+				var message = new Message();
+				//reqData Setter
+				for(var elem in reqData){
+					console.log(elem);
+					console.log(reqData[elem])
+					message[elem] = reqData[elem];
+					
 				}
-				else{
-					var text = "귀하의 차량이 성공적으로 등록되었습니다. 축하합니다!";
-					result = {"message":{"text":text}};
+				message.save(function(err,msg){
+					if(err){
+						var text = "fuck you asshole";
+						result = {"message":{"text":text}};
+						resolved(result);
 					}
-			})
-			return result;
-										}
-	}
+					else{
+						Message.find(function(err,msginsult){
+							var rand = msginsult[Math.floor(Math.random() * msginsult.length)];
+							console.log(rand);
+							var text = rand.content;
+							result = {"message":{"text":text}};
+							resolved(result);
+						})
+						}
+				})
+			 })
+		
 }
 
 
 
-module.exports = artService
+module.exports = messageService
 
 
 

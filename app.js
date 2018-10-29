@@ -14,10 +14,12 @@ app.set('port', process.env.PORT || 3000);
 app.set('rootDir',__dirname)
 app.set('view engine', 'jade');
 
-// Request Body Json 형태로 읽을 수 있는 라이브러리
-var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
+//Request Body Json 형태로 읽을 수 있는 라이브러리
+var bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
 
 // routes
 require('module-alias/register');
@@ -88,4 +90,4 @@ db.once('open', function(){
  logger.info("Connected to mongod server");
 });
 
-mongoose.connect('mongodb://heroku_7rzgg5js:kjn2hj0mimru1q4uoq392jvr3e@ds143932.mlab.com:43932/heroku_7rzgg5js',{ useNewUrlParser: true });
+mongoose.connect('mongodb://herokugina:herokugina123@ds157639.mlab.com:57639/heroku_lz2n94wf',{ useNewUrlParser: true });
