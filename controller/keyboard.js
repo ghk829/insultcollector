@@ -1,8 +1,5 @@
 exports.keyboard = function(req, res){
-	var result = {
-			  "type" : "buttons",
-			  "buttons" : ["hello"]
-			}
+	var result = {}
 	res.json(result);	
 		
 };
