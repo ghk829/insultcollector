@@ -1,5 +1,4 @@
 exports.keyboard = function(req, res){
-	var result = {}
+	var result = {"type":"text"};
 	res.json(result);	
-		
 };
