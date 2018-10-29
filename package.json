@@ -1,0 +1,22 @@
+{
+  "name": "insultcollector",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jade": "*",
+    "module-alias": "^2.1.0",
+    "mongoose": "^5.2.12",
+    "winston": "^3.1.0"
+  },
+  "_moduleAliases": {
+    "@route": "route",
+    "@model": "model",
+    "@controller": "controller",
+    "@service": "service"
+  }
+}
